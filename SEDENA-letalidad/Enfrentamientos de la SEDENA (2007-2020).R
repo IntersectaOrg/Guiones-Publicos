@@ -548,7 +548,7 @@ df_eventos_aver <- aver %>%
   select(year, muertes, total)
 
 personas = left_join(df_eventos_aver, df_eventos, by=c("year"))
-personas =  mutate(personas, indice_year_adj = indice_year*100)
+personas =  mutate(personas, indice_year_adj = indice_year*500)
 
 ggplot(data = personas, aes(x = as.integer(year), y = total, fill = muertes),
        position = position_stack(1), size=4, hjust=.5, vjust=.5, color="black", 
@@ -566,7 +566,7 @@ ggplot(data = personas, aes(x = as.integer(year), y = total, fill = muertes),
   geom_label(aes(x = as.integer(year), y = indice_year_adj, label = (indice_year), fill = c("white")), 
              hjust = -0.2, vjust = 0.7, show.legend = FALSE) +
   # Establecer segunda escala
-  scale_y_continuous(sec.axis = sec_axis(~ . / 100, name = "\n Índice \n Civiles fallecidos por cada civil detenido \n"))  +
+  scale_y_continuous(sec.axis = sec_axis(~ . / 500, name = "\n Índice \n Civiles fallecidos por cada civil detenido \n"))  +
   # Etiquetado de la gráfica 
   labs(title = "Civiles fallecidos y detenidos en los enfrentamientos de la SEDENA", 
        subtitle = "Por año, con su respectivo índice \n", 
@@ -616,7 +616,7 @@ df_eventos_aver <- aver %>%
   select(year, muertes, total)
 
 personas = left_join(df_eventos_aver, df_eventos, by=c("year"))
-personas =  mutate(personas, indice_year_adj = indice_year*100)
+personas =  mutate(personas, indice_year_adj = indice_year*20)
 
 ggplot(data = personas, aes(x = as.integer(year), y = total, fill = muertes),
        position = position_stack(1), size=4, hjust=.5, vjust=.5, color="black", 
@@ -634,7 +634,7 @@ ggplot(data = personas, aes(x = as.integer(year), y = total, fill = muertes),
   geom_label(aes(x = as.integer(year), y = indice_year_adj, label = (indice_year), fill = c("white")), 
              hjust = -0.2, vjust = 0.7, show.legend = FALSE) +
   # Establecer segunda escala
-  scale_y_continuous(sec.axis = sec_axis(~ . / 100, name = "\n Índice \n Civiles fallecidos por cada militar fallecido \n"))  +
+  scale_y_continuous(sec.axis = sec_axis(~ . / 20, name = "\n Índice \n Civiles fallecidos por cada militar fallecido \n"))  +
   # Etiquetado de la gráfica 
   labs(title = "Civiles fallecidos y militares fallecidos en los enfrentamientos de la SEDENA", 
        subtitle = "Por año, con su respectivo índice \n", 
