@@ -40,7 +40,7 @@ tema <-  theme_linedraw() +
 add_intlogo <- function(graf, escala){
   graf_con_logo <- add_logo(
     plot_path = graf,
-    logo_path = "https://github.com/IntersectaOrg/practicas_programacion/blob/main/logo_long.jpg",
+    logo_path = "logo_long.jpg",
     logo_position = "bottom right",
     logo_scale = escala)
   
@@ -232,7 +232,7 @@ Datos procesados por Intersecta (intersecta.org).\n",
   coord_flip()
 ggsave(paste(out, "02 enfrentamientos por entidad.png", sep = "/"), width = 20, height = 16)
 
-add_intlogo(graf = "/Users/samnbk/Documents/GitHub/FFAA/out/sedena/enfrentamientos/parapublicar/02 enfrentamientos por entidad.png", escala = 7)
+add_intlogo(graf = paste(out, "02 enfrentamientos por entidad.png", sep = "/"), escala = 7)
 
 # ¿En qué entidades ocurrieron los enfrentamientos, cada año?
 
@@ -259,7 +259,7 @@ Datos procesados por Intersecta (intersecta.org).\n",
   scale_x_discrete(position = "top") 
 ggsave(paste(out, "03 enfrentamientos, por año, por entidad.png", sep="/"), width=16, height=16)
 
-add_intlogo(graf = "/Users/samnbk/Documents/GitHub/FFAA/out/sedena/enfrentamientos/parapublicar/03 enfrentamientos, por año, por entidad.png", escala = 7)
+add_intlogo(graf = paste(out, "03 enfrentamientos, por año, por entidad.png", sep="/"), escala = 7)
 
 # En total, ¿cuántas personas (civiles o militares) han sido fallecidas, heridas o detenidas en enfrentamientos?
 
@@ -297,7 +297,7 @@ Datos procesados por Intersecta (intersecta.org).\n",
   coord_flip()
 ggsave(paste(out, "04 total de personas fallecidas, heridas, detenidas.png", sep = "/"), width = 18, height = 16)
 
-add_intlogo(graf = "/Users/samnbk/Documents/GitHub/FFAA/out/sedena/enfrentamientos/parapublicar/04 total de personas fallecidas, heridas, detenidas.png", escala = 7)
+add_intlogo(graf = paste(out, "04 total de personas fallecidas, heridas, detenidas.png", sep = "/"), escala = 7)
 
 # En los enfrentamientos, ¿hubo civiles/militares fallecidos, heridos, detenidos?
 
@@ -336,7 +336,7 @@ Datos procesados por Intersecta (intersecta.org).\n",
   coord_flip()
 ggsave(paste(out, "05 enfrentamientos con.png", sep = "/"), width = 16, height = 16)
 
-add_intlogo(graf = "/Users/samnbk/Documents/GitHub/FFAA/out/sedena/enfrentamientos/parapublicar/05 enfrentamientos con.png", escala = 7)
+add_intlogo(graf = paste(out, "05 enfrentamientos con.png", sep = "/"), escala = 7)
 
 # En qué porcentaje de los enfrentamientos, para cada año: ¿hubo civiles/militares fallecidos, heridos, detenidos?
 
@@ -415,7 +415,7 @@ Datos procesados por Intersecta (intersecta.org).\n",
   scale_x_continuous(breaks=seq(from=2007, to=2020, by=1)) 
 ggsave(paste(out, "06 enfrentamientos con, por año.png", sep = "/"), width = 20, height = 16)
 
-add_intlogo(graf = "/Users/samnbk/Documents/GitHub/FFAA/out/sedena/enfrentamientos/parapublicar/06 enfrentamientos con, por año.png", escala = 7)
+add_intlogo(graf = paste(out, "06 enfrentamientos con, por año.png", sep = "/"), escala = 7)
 
 # ¿Qué proporción de los enfrentamientos fueron 1) solo con civiles fallecidos; 2) solo con militares fallecidos; 3) solo con civiles detenidos?
 
@@ -447,7 +447,7 @@ Datos procesados por Intersecta (intersecta.org).\n",
   scale_fill_manual(values = c("red","black", "gray"))
 ggsave(paste(out, "07 enfrentamientos solo con, por año.png", sep = "/"), width = 16, height = 16)
 
-add_intlogo(graf = "/Users/samnbk/Documents/GitHub/FFAA/out/sedena/enfrentamientos/parapublicar/07 enfrentamientos solo con, por año.png", escala = 7)
+add_intlogo(graf = paste(out, "07 enfrentamientos solo con, por año.png", sep = "/"), escala = 7)
 
 # Civiles muertos y civiles heridos, por año, con su respectivo índice (de letalidad)
 
@@ -515,7 +515,7 @@ Datos procesados por Intersecta (intersecta.org).\n",
                     breaks = c("Civiles fallecidos", "Civiles heridos"))
 ggsave(paste(out, "08 civiles muertos y heridos.png", sep = "/"), width = 16, height = 16)
 
-add_intlogo(graf = "/Users/samnbk/Documents/GitHub/FFAA/out/sedena/enfrentamientos/parapublicar/08 civiles muertos y heridos.png", escala = 7)
+add_intlogo(graf = paste(out, "08 civiles muertos y heridos.png", sep = "/"), escala = 7)
 
 # Civiles muertos y detenidos por año, con su respectivo índice
 
@@ -583,7 +583,7 @@ Datos procesados por Intersecta (intersecta.org).\n",
                     breaks = c("Civiles fallecidos", "Civiles detenidos"))
 ggsave(paste(out, "09 civiles muertos y detenidos.png", sep = "/"), width = 16, height = 16)
 
-add_intlogo(graf = "/Users/samnbk/Documents/GitHub/FFAA/out/sedena/enfrentamientos/parapublicar/09 civiles muertos y detenidos.png", escala = 7)
+add_intlogo(graf = paste(out, "09 civiles muertos y detenidos.png", sep = "/"), escala = 7)
 
 # Civiles muertos y militares muertos por año, con su respectivo índice
 
@@ -651,7 +651,7 @@ Datos procesados por Intersecta (intersecta.org).\n",
                     breaks = c("Civiles fallecidos", "Militares fallecidos"))
 ggsave(paste(out, "10 civiles muertos y militares muertos.png", sep = "/"), width = 16, height = 16)
 
-add_intlogo(graf = "/Users/samnbk/Documents/GitHub/FFAA/out/sedena/enfrentamientos/parapublicar/10 civiles muertos y militares muertos.png", escala = 7)
+add_intlogo(graf = paste(out, "10 civiles muertos y militares muertos.png", sep = "/"), escala = 7)
 
 # ¿Cuál es el resultado más común de los enfrentamientos, considerando las combinaciones de civiles/militares detenidos/heridos/fallecidos?
 
@@ -678,7 +678,7 @@ Datos procesados por Intersecta (intersecta.org).\n",
   coord_flip()
 ggsave(paste(out, "11 tipos de eventos.png", sep = "/"), width = 20, height = 16)
 
-add_intlogo(graf = "/Users/samnbk/Documents/GitHub/FFAA/out/sedena/enfrentamientos/parapublicar/11 tipos de eventos.png", escala = 7)
+add_intlogo(graf = paste(out, "11 tipos de eventos.png", sep = "/"), escala = 7)
 
 # De las personas 'lastimadas', ¿cuántos son civiles/militares muertos y heridos?
 
@@ -717,7 +717,7 @@ Datos procesados por Intersecta (intersecta.org).\n",
   scale_fill_manual(values = c("gray", "#fb8500", "black","red"))
 ggsave(paste(out, "12 personas lastimadas.png", sep = "/"), width = 16, height = 16)
 
-add_intlogo(graf = "/Users/samnbk/Documents/GitHub/FFAA/out/sedena/enfrentamientos/parapublicar/12 personas lastimadas.png", escala = 7)
+add_intlogo(graf = paste(out, "12 personas lastimadas.png", sep = "/"), escala = 7)
 
 # ¿Qué proporción de civiles  fallecieron en eventos con solo civiles fallecidos, por año?
 
@@ -751,7 +751,7 @@ Datos procesados por Intersecta (intersecta.org).\n",
   scale_fill_manual(values = c("red"))
 ggsave(paste(out, "13 civiles fallecidos en eventos solo con civiles fallecidos.png", sep = "/"), width = 16, height = 16)
 
-add_intlogo(graf = "/Users/samnbk/Documents/GitHub/FFAA/out/sedena/enfrentamientos/parapublicar/13 civiles fallecidos en eventos solo con civiles fallecidos.png", escala = 7)
+add_intlogo(graf = paste(out, "13 civiles fallecidos en eventos solo con civiles fallecidos.png", sep = "/"), escala = 7)
 
 # En promedio, ¿cuántos civiles han fallecido considerando el total de los enfrentamientos, para cada año?
 
@@ -777,5 +777,5 @@ Datos procesados por Intersecta (intersecta.org).\n",
   scale_x_continuous(breaks=seq(from=2007, to=2020, by=1)) 
 ggsave(paste(out, "14 promedio de civiles fallecidos.png", sep = "/"), width = 20, height = 16)
 
-add_intlogo(graf = "/Users/samnbk/Documents/GitHub/FFAA/out/sedena/enfrentamientos/parapublicar/14 promedio de civiles fallecidos.png", escala = 7)
+add_intlogo(graf = paste(out, "14 promedio de civiles fallecidos.png", sep = "/"), escala = 7)
 
