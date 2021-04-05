@@ -49,8 +49,8 @@ add_intlogo <- function(graf, escala){
 
 # 0. Directorios
 
-inp     <- "inp/sedena/enfrentamientos/"
-out     <- "out/sedena/enfrentamientos/parapublicar/"
+inp     <- "input/"
+out     <- "graficas/"
 
 # 1. Cargar datos --------------------------------------------------------------
 
