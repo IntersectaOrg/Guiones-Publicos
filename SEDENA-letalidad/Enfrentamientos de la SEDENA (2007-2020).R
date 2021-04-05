@@ -40,7 +40,7 @@ tema <-  theme_linedraw() +
 add_intlogo <- function(graf, escala){
   graf_con_logo <- add_logo(
     plot_path = graf,
-    logo_path = "/Users/samnbk/Dropbox/Intersecta/Intersecta branding/01 Logotipo/02 PNG/Intersecta_Logotipo-03 copy.png",
+    logo_path = "https://github.com/IntersectaOrg/practicas_programacion/blob/main/logo_long.jpg",
     logo_position = "bottom right",
     logo_scale = escala)
   
@@ -202,9 +202,10 @@ Datos procesados por Intersecta (intersecta.org).\n",
   tema +
   theme(axis.text.x = element_text(angle=0, size = 18)) +
   scale_x_continuous(breaks=seq(from=2007, to=2020, by=1)) 
+
 ggsave(paste(out, "01 enfrentamientos por año.png", sep = "/"), width = 20, height = 16)
 
-add_intlogo(graf = "/Users/samnbk/Documents/GitHub/FFAA/out/sedena/enfrentamientos/parapublicar/01 enfrentamientos por año.png", escala = 7)
+add_intlogo(graf = paste(out, "01 enfrentamientos por año.png", sep = "/"), escala = 7)
 
 # ¿En qué entidades ocurrieron los enfrentamientos?
 
