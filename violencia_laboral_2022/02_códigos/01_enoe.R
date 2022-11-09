@@ -53,7 +53,6 @@ df_pobocupa <- read_excel(paste_inp("ENOE_pob_ocupada_sexo.xlsx"),
 # 2. Funciones -----------------------------------------------------------------
 
 ## 2.1. Añadir logo ------------------------------------------------------------
-
 add_intlogo <- function(graf, escala){
     graf_con_logo <- add_logo(
         plot_path = graf,
